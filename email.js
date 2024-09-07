@@ -23,6 +23,7 @@ const Email = mongoose.model('Email', emailSchema);
 // Endpoint to handle form submission
 app.post('/api/email', async (req, res) => {
   const { email, message } = req.body;
+  console.log(email, message);
 
   const newEmail = new Email({ email, message });
 
