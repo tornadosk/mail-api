@@ -31,6 +31,9 @@ app.post('/api/email', async (req, res) => {
     res.status(500).send('Failed to submit email');
   }
 });
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
